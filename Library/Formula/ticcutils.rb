@@ -9,8 +9,6 @@ class Ticcutils < Formula
   depends_on "pkg-config" => :build
 
   def install
-    ENV['CFLAGS']='-L/usr/local/opt/icu4c/lib'
-    ENV['LDFLAGS']='-I/usr/local/opt/icu4c/include'
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
